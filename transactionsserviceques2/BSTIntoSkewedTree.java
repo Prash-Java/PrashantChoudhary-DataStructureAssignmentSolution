@@ -19,13 +19,13 @@ public class BSTIntoSkewedTree {
         // Checkpoint To check current Node and perform Recursion on Inorder Traversals
         if (currentNode == null)
             return;
-        //First Left SubTree
+        //Left SubTree-->Recursive
         InorderTraversals(currentNode.left);
         previousNode.left = null;
         //Adding Current Node Pointer
         previousNode.right = currentNode;
         previousNode = currentNode;
-        //Right SubTree
+        //Right SubTree-->Recursive
         InorderTraversals(currentNode.right);
     }
 
